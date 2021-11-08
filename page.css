@@ -1,0 +1,40 @@
+body{
+    font-size: 1.6em;
+    background: black;
+    color: white;
+}
+
+.team-name-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+.team-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.team-container div{
+    border: 2px solid blue;
+    height:350px;
+}
+
+
+.img-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top:1em;
+}
+
+img{
+    width:100%;
+    border-radius: 50%;
+}
+
+.team-container div img{
+    width:33%;
+}
+

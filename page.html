@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "page.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teams selection</h1>
+    <div class = "team-name-container">
+        <div>Team 1</div>
+        <div>Team 2</div>
+        <div>Team 3</div>
+        <div>Team 4</div>
+    </div>
+    <div class = "team-container">
+        <div class = "first-team" ondrop = "drop(event)" ondragover="allowDrop(event)"></div>
+        <div class = "second-team" ondrop = "drop(event)" ondragover="allowDrop(event)"></div>
+        <div class = "third-team" ondrop = "drop(event)" ondragover="allowDrop(event)"></div>
+        <div class = "fourth-team" ondrop = "drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <div class = "img-container">
+        <div><img id="kohli" src = "img/kohli.jpeg" draggable = "true" ondragstart = "drag(event)"></div>
+        <div><img id="ashwin" src="img/ashwin.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="azam" src="img/azam.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="bumrah" src="img/bumrah.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="jadeja" src="img/jadeja.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="root" src="img/root.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="sharma" src="img/sharma.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="stokes" src="img/stokes.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="warner" src="img/warner.png" draggable="true" ondragstart="drag(event)"></div>
+        <div><img id="williamson" src="img/williamson.png" draggable="true" ondragstart="drag(event)"></div>
+
+    </div>
+
+    <script>
+        function allowDrop(event){
+            event.preventDefault()
+        }
+
+        function drag(event){
+           var id = event.target.id;
+           event.dataTransfer.setData('text', id);
+        }
+
+        function drop(event){
+            var id = event.dataTransfer.getData('text')
+            event.target.appendChild(document.getElementById(id))
+        }
+
+        
+    </script>
+
+    
+</body>
+</html>
